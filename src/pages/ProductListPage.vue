@@ -62,6 +62,7 @@
           <p class="text-blue-600 font-bold text-lg">{{ product.price.toLocaleString() }}원</p>
           <button
             class="mt-3 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition"
+            @click="goToDetail(product.id)"
           >
             상세 보기
           </button>
@@ -77,11 +78,13 @@
 import Header from '@/components/Header.vue'
 import CategoryDropdown from '@/components/CategoryDropdown.vue'
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 
 const selectedCategory = ref('')
 const searchInput = ref('')
 const keyword = ref('')
 const category = ref('')
+const router = useRouter()
 
 const onSearch = () => {
   keyword.value = searchInput.value.trim()
@@ -102,4 +105,8 @@ const filteredProducts = computed(() =>
       )
     : products.value
 )
+
+const goToDetail = (productId: number) => {
+  router.push(`/product/${productId}`)
+}
 </script>
