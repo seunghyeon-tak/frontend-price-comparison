@@ -28,6 +28,14 @@
               </li>
               <li>
                 <router-link
+                  to="/mypage/favorites"
+                  class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                  상품 알림 관리
+                </router-link>
+              </li>
+              <li>
+                <router-link
                   to="/mypage/profile"
                   class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
                 >
