@@ -4,6 +4,8 @@ import SignupPage from '@/pages/SignupPage.vue'
 import ProductListPage from '@/pages/ProductListPage.vue'
 import ProductDetailPage from '@/pages/ProductDetailPage.vue'
 import FavoritesPage from '@/pages/FavoritesPage.vue'
+import Profile from '@/pages/Profile.vue'
+import Alerts from '@/pages/Alerts.vue'
 
 const routes = [
   { path: '/login', component: LoginPage },
@@ -11,6 +13,8 @@ const routes = [
   { path: '/products', component: ProductListPage },
   { path: '/product/:id', component: ProductDetailPage, props: true },
   { path: '/mypage/favorites', component: FavoritesPage },
+  { path: '/mypage/profile', component: Profile },
+  { path: '/mypage/alerts', component: Alerts },
 ]
 
 const router = createRouter({
